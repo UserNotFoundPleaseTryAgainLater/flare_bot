@@ -43,7 +43,7 @@ def quiescence_search(  # not using right now, fixing core functions first
     if static_eval > alpha:
         alpha = static_eval
         
-    if is_quiet(board) or board.is_game_over() or qdepth == 0:
+    if is_quiet(board) or board.is_game_over():
         return (
             static_eval,
             None,
